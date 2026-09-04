@@ -1,0 +1,39 @@
+@media only screen and (min-width: 38rem){
+    header, main, nav, footer{
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    header{
+        grid-template-columns: 24px auto 700px;
+        column-gap: 8px;
+        padding: 5px 0 5px 10px;
+        align-items: end;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navigation {
+        display: grid;
+        align-items: end;
+    }
+
+    ul{
+
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: row;
+        gap: 50px;
+        column-span: all;
+        color: #30405B;
+        text-decoration: none;
+    }
+
+    li{
+        text-decoration: none;
+    }
+
+    .current{
+        column-span: all;
+    }
+}

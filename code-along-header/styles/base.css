@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    column-gap: 8px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid 1px #ddd;
+}
+
+header img{
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+
+header span{
+    font-size: 1.2rem;
+    color: #30405B;
+}
+
+button{
+    height: 30px;
+}
+
+.hamburger::before {
+    background: none;
+    border: none;
+  content: "\2630";
+  cursor: pointer;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+.navigation{
+    display: none;
+}
+
+.navigation.show{
+    display: block;
+}

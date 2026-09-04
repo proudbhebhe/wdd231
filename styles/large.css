@@ -1,0 +1,72 @@
+@media screen and (min-width: 32.5rem) {
+    header,main,nav,footer{
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 900px;
+    }
+    :root{
+    --color1: rgb(10, 50, 62);
+    --color2: #838383;
+    }
+    body{
+        margin: 0 auto;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 24px auto;
+    }
+
+    .hamburger{
+        display: none;
+    }
+    .navigation{
+        display: flex;
+        background-color: var(--color1);
+        color: #fff;
+    
+
+    }
+    .navigation .active{
+        background-color: var(--color2);
+    }
+    .navigation a{
+        color: #fff;
+        text-decoration: none;
+        margin: 0 20px 0 0;
+        padding: 5px;
+    }
+    .classic{
+        display: flex;
+       gap: 20px;
+    }
+    
+    .info{
+        background-color: var(--color2);
+        /*padding: 10px;*/
+        margin: 5px;
+    }
+
+    .info h2{
+        display: flex;
+        background-color: var(--color1);
+        color: #fff;
+        border: solid black 2px;
+        align-items: center;
+        justify-content: center;
+        margin: 5px auto;
+    }
+
+    .info img{
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        height: auto;
+        padding: 10px 20px;
+        margin: 10px auto;
+    }
+
+    .icons{
+        display: flex;
+        flex-flow: row;
+    }
+}
