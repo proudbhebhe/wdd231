@@ -96,19 +96,33 @@ function createCourseCards(filteredCourses){
         let subject = document.createElement("h3");
         let number = document.createElement("p");
 
-        subject.innerHTML = course.subject; number.innerHTML = course.number;
+        subject.innerHTML = course.subject; 
+        number.innerHTML = course.number;
+
+        
     
 
         card.appendChild(subject);
         card.appendChild(number);
-
-        card.setAttribute("class", "blocks")
+        card.setAttribute("class", "blocks");
         
 
         document.querySelector(".build").appendChild(card);
         
     });
     
+    const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+
+    let creditContainer = document.getElementById("credit-display");
+    
+    // If the element doesn't exist in your HTML yet, create it dynamically
+    if (!creditContainer) {
+        creditContainer = document.createElement("h3");
+        creditContainer.id = "credit-display";
+        document.querySelector(".build").after(creditContainer);
+    }
+
+    creditContainer.innerHTML = `Total Credits: ${totalCredits}`;
 }
 
 homeLink.addEventListener("click", () => {
