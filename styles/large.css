@@ -6,7 +6,7 @@
     }
     :root{
     --color1: rgb(10, 50, 62);
-    --color2: #838383;
+    --color2: #c6cdd2;
     }
     body{
         margin: 0 auto;
@@ -50,7 +50,6 @@
         display: flex;
         background-color: var(--color1);
         color: #fff;
-        border: solid black 2px;
         align-items: center;
         justify-content: center;
         margin: 5px auto;
