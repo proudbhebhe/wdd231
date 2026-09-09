@@ -12,8 +12,6 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "width" 100;
 }
 
 header{
@@ -54,6 +52,7 @@ header span{
 }
 .show .active{
     background-color: var(--color2);
+    color: var(--color1);
 }
 .show a{
     display: grid;

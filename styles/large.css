@@ -28,6 +28,7 @@
     }
     .navigation .active{
         background-color: var(--color2);
+        color: var(--color1);
     }
     .navigation a{
         color: #fff;
