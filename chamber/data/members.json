@@ -1,0 +1,88 @@
+[
+  {
+    "company_name": "TechNova Solutions",
+    "company_addresses": [
+      "100 Innovation Way, San Jose, CA 95112"
+    ],
+    "company_phone_number": "+1-555-0101",
+    "company_website_url": "https://technova.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 3,
+    "industry": "Software Development",
+    "founded_year": 2012
+  },
+  {
+    "company_name": "GreenScape Landscaping",
+    "company_addresses": [
+      "245 Elm St, Portland, OR 97204"
+    ],
+    "company_phone_number": "+1-555-0102",
+    "company_website_url": "https://greenscape.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 1,
+    "industry": "Environmental Services",
+    "employee_count": 45
+  },
+  {
+    "company_name": "Apex Financial Group",
+    "company_addresses": [
+      "88 Wall St, Suite 400, New York, NY 10005",
+      "Branch: 12 Financial Plaza, Boston, MA 02110"
+    ],
+    "company_phone_number": "+1-555-0103",
+    "company_website_url": "https://apexfinancial.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 2,
+    "industry": "Investment Banking",
+    "assets_under_management": "$4.2B"
+  },
+  {
+    "company_name": "BlueWave Dynamics",
+    "company_addresses": [
+      "14 Ocean Drive, Miami, FL 33101"
+    ],
+    "company_phone_number": "+1-555-0104",
+    "company_website_url": "https://bluewave.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 3,
+    "industry": "Marine Engineering",
+    "core_product": "Water Filtration Systems"
+  },
+  {
+    "company_name": "Summit Logistics",
+    "company_addresses": [
+      "900 Cargo Court, Dallas, TX 75201",
+      "Warehouse: 400 Industrial Parkway, Houston, TX 77001"
+    ],
+    "company_phone_number": "+1-555-0105",
+    "company_website_url": "https://summitlogistics.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 1,
+    "industry": "Supply Chain & Transportation",
+    "fleet_size": 120
+  },
+  {
+    "company_name": "IronClad Security",
+    "company_addresses": [
+      "77 Shield Road, Chicago, IL 60601"
+    ],
+    "company_phone_number": "+1-555-0106",
+    "company_website_url": "https://ironclad.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 2,
+    "industry": "Cybersecurity",
+    "active_clients": 350
+  },
+  {
+    "company_name": "Zenith Culinary",
+    "company_addresses": [
+      "122 Foodie Lane, Austin, TX 73301"
+    ],
+    "company_phone_number": "+1-555-0107",
+    "company_website_url": "https://zenithculinary.example.com",
+    "image_file_name": "images/logo.jpg",
+    "membership_level": 3,
+    "industry": "Hospitality & Catering",
+    "michelin_stars": 1
+  }
+]

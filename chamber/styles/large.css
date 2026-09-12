@@ -1,0 +1,55 @@
+@media screen and (min-width: 32.5rem){
+    :root{
+    --primary-color: #1E3A8A;
+    --secondary-color: #D97706;
+    --bg: #F8FAFC;
+    --text-color: #0F172A;
+    --font-family: 'Inter', system-ui, sans-serif;
+    }
+    .hamburger{
+        display: none;
+    }
+    header,main,nav,footer{
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 75px 1fr 1fr;
+    }
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        color: var(--secondary-color);
+    }
+    .navigation a{
+        color: var(--secondary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 5px;
+        margin: 5px;
+        font-family: var(--font-family);
+    }
+    footer{
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: start;
+        
+    }
+    footer .socials{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+    .socials a img{
+        padding: 0 20px;
+        margin: 0 20px;
+        width: 75px;
+        height: 75px;
+    }
+}

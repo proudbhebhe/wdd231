@@ -22,12 +22,19 @@ header{
 header span{
     align-content: center;
     color: var(--secondary-color);
+    font-weight: 400;
+    font-size: 2rem;
 }
 .hamburger::before{
     content: "\2630";
+    text-decoration: none;
+    font-size: 3rem;
 }
 .hamburger.show::before{
     content: "\00D7";
+    font-weight: 400;
+    font-size: 3rem;
+    
 }
 .navigation{
     display: none;
@@ -50,18 +57,86 @@ header span{
 header img{
     width: 75px;
 }
+main .filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: #0F172A solid 1px;
+    margin: 10px 15px;
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.gridView{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+section:hover{
+    transform: translateY(-5px); /* Moves the figure up by 5 pixels */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+#company-directory section{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+}
+section img{
+    display: block;
+    place-items: center;
+    width: 200px;
+}
+.listView section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+}
+section{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: var(--text-color) solid 1px;
+    margin: 10px;
+}
+#company-directory.gridView section{
+    border: #0F172A solid 1px;
+    display: block;
+    place-items: center;
+    padding: 10px 30px;
+    margin: 10px 30px;
+    width: 400px;
+    height: auto;
+}
+
+.change:hover{
+    transform: translateY(-5px); /* Moves the figure up by 5 pixels */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
 
 footer{
     background-color: var(--primary-color);
     color: var(--text-color);
     display: grid;
-    grid-template-rows: 1fr 50px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     justify-content: start;
     
 }
+footer div{
+    margin: 0 10px;
+}
 footer .socials{
     display: grid;
-    grid-template-columns: 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-direction: row;
     justify-content: center;
 }
@@ -75,4 +150,5 @@ footer .end{
     flex-direction: column;
     justify-content: start;
     left: 10px;
+    margin: 10px;
 }
