@@ -12,6 +12,7 @@
     header,main,nav,footer{
         box-sizing: border-box;
         margin: 0 auto;
+        max-width: 1200px;
     }
     header{
         display: grid;
@@ -39,6 +40,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: start;
+        height: 200px;
         
     }
     footer .socials{

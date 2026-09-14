@@ -6,7 +6,7 @@
     ],
     "company_phone_number": "+1-555-0101",
     "company_website_url": "https://technova.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/tech.jpg",
     "membership_level": 3,
     "industry": "Software Development",
     "founded_year": 2012
@@ -18,7 +18,7 @@
     ],
     "company_phone_number": "+1-555-0102",
     "company_website_url": "https://greenscape.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/landscape.jpg",
     "membership_level": 1,
     "industry": "Environmental Services",
     "employee_count": 45
@@ -31,7 +31,7 @@
     ],
     "company_phone_number": "+1-555-0103",
     "company_website_url": "https://apexfinancial.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/financial.jpg",
     "membership_level": 2,
     "industry": "Investment Banking",
     "assets_under_management": "$4.2B"
@@ -56,7 +56,7 @@
     ],
     "company_phone_number": "+1-555-0105",
     "company_website_url": "https://summitlogistics.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/logistic.jpg",
     "membership_level": 1,
     "industry": "Supply Chain & Transportation",
     "fleet_size": 120
@@ -68,7 +68,7 @@
     ],
     "company_phone_number": "+1-555-0106",
     "company_website_url": "https://ironclad.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/security.jpg",
     "membership_level": 2,
     "industry": "Cybersecurity",
     "active_clients": 350
@@ -80,7 +80,7 @@
     ],
     "company_phone_number": "+1-555-0107",
     "company_website_url": "https://zenithculinary.example.com",
-    "image_file_name": "images/logo.jpg",
+    "image_file_name": "images/culinary.jpg",
     "membership_level": 3,
     "industry": "Hospitality & Catering",
     "michelin_stars": 1
