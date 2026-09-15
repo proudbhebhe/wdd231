@@ -96,7 +96,7 @@ section:hover{
 #company-directory section{
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr; 
 }
 #company-directory section img{
     display: none;

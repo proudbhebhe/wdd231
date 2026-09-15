@@ -34,6 +34,11 @@
         margin: 5px;
         font-family: var(--font-family);
     }
+    #company-directory section{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    }
     footer{
         background-color: var(--primary-color);
         color: var(--text-color);
