@@ -1,6 +1,6 @@
 :root{
-    --primary-color: #1E3A8A;
-    --secondary-color: #D97706;
+    --primary-color: #3355ff;
+    --secondary-color: #ddec13;
     --bg: #F8FAFC;
     --text-color: #0F172A;
     --font-family: 'Inter', system-ui, sans-serif;
@@ -28,7 +28,7 @@ header{
 }
 header span{
     align-content: center;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-weight: 400;
     font-size: 2rem;
 }
@@ -64,6 +64,20 @@ header span{
 header img{
     width: 75px;
 }
+#hero{
+    width: 100%;
+    position: relative;
+}
+.action{
+    position: absolute;
+    left: 20px;
+    top: 270px;
+        background-color: #D97706;
+        padding: 10px;
+        font-size: 1.5rem;
+        color: #1E3A8A;
+        border-radius: 10px;
+}
 main .filters{
     display: flex;
     justify-content: center;
@@ -72,7 +86,7 @@ main .filters{
 
 .change{
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     border-radius: 5px;
     padding: 10px 20px;
     border: #0F172A solid 1px;
@@ -116,7 +130,7 @@ section img{
     
 section{
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 0.5;
     border: var(--text-color) solid 1px;
     margin: 10px;
@@ -146,7 +160,7 @@ footer{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: start;
-    color: var(--secondary-color);
+    color: var(--text-color);
     
 }
 footer div{

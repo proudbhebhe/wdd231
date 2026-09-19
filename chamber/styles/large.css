@@ -1,7 +1,7 @@
 @media screen and (min-width: 32.5rem){
     :root{
-    --primary-color: #1E3A8A;
-    --secondary-color: #D97706;
+    --secondary-color: #3355ff;
+    --primary-color: #ddec13;
     --bg: #F8FAFC;
     --text-color: #0F172A;
     --font-family: 'Inter', system-ui, sans-serif;
@@ -21,10 +21,10 @@
     .navigation{
         display: flex;
         flex-direction: row;
-        color: var(--secondary-color);
+        color: var(--text-color);
     }
     .navigation a{
-        color: var(--secondary-color);
+        color: var(--text-color);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -33,6 +33,16 @@
         padding: 5px;
         margin: 5px;
         font-family: var(--font-family);
+    }
+    .action{
+        position: absolute;
+        top: 450px;
+        left: 500px;
+        background-color: var(--secondary-color);
+        padding: 10px;
+        font-size: 1.5rem;
+        color: var(--text-color);
+        border-radius: 10px;
     }
     #company-directory section{
     display: grid;
