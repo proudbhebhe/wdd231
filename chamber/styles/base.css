@@ -1,8 +1,10 @@
 :root{
-    --primary-color: #3355ff;
-    --secondary-color: #ddec13;
+    --secondary-color: #465082;
+    --primary-color: #ddec13;
+    --footer-color: #83904f;
+    --footer: #7f8758;
     --bg: #F8FAFC;
-    --text-color: #0F172A;
+    
     --font-family: 'Inter', system-ui, sans-serif;
 }
 *{
@@ -20,15 +22,15 @@
         margin: 0 auto;
     }
 header{
-    background-color: var(--primary-color);
-    color: var(--text-color);
+    background-color: var(--secondary-color);
+    color: var(--bg);
     display: grid;
     grid-template-columns: 75px 1fr 44px;
     gap: 8px;
 }
 header span{
     align-content: center;
-    color: var(--text-color);
+    color: var(--bg);
     font-weight: 400;
     font-size: 2rem;
 }
@@ -51,7 +53,26 @@ header span{
     background-color: var(--primary-color);
     color: #fff;
 }
+.second{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.second section{
+    width: 300px;
+    margin: 0 100px;
+}
+#forecast-container{
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--bg);
+    border-radius: 5px;
+    padding: 5px;
 
+}
+#forecast-container img{
+    width: 50px;
+}
 .show a{
     display: grid;
     color: #fff;
@@ -72,11 +93,11 @@ header img{
     position: absolute;
     left: 20px;
     top: 270px;
-        background-color: #D97706;
-        padding: 10px;
-        font-size: 1.5rem;
-        color: #1E3A8A;
-        border-radius: 10px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: #1E3A8A;
+    border-radius: 10px;
 }
 main .filters{
     display: flex;
@@ -86,10 +107,10 @@ main .filters{
 
 .change{
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--bg);
     border-radius: 5px;
     padding: 10px 20px;
-    border: #0F172A solid 1px;
+    
     margin: 10px 15px;
     font-family: var(--font-family);
     font-size: 1.2rem;
@@ -103,7 +124,7 @@ main .filters{
     justify-content: center;
     align-items: center;
 }
-section:hover{
+section:hove{
     transform: translateY(-5px); /* Moves the figure up by 5 pixels */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
@@ -129,11 +150,28 @@ section img{
 }
     
 section{
-    background-color: var(--primary-color);
+    background-color: var(--bg);
     color: var(--text-color);
     font-size: 0.5;
-    border: var(--text-color) solid 1px;
     margin: 10px;
+    border-radius: 5px;
+}
+section ul li{
+    margin: 10px 0;
+}
+section ul .event:nth-child(odd){
+background-color: var(--footer-color);
+}
+section ul .event:nth-child(even){
+    background-color: var(--footer);
+}
+#company-directory section:nth-child(odd){
+    background-color: var(--footer-color);
+}
+
+#company-directory section:nth-child(even){
+    background-color: var(--footer);
+
 }
 #company-directory.gridView section{
     border: #0F172A solid 1px;
@@ -156,7 +194,7 @@ section{
 
 
 footer{
-    background-color: var(--primary-color);
+    background-color: var(--footer-color);
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: start;
