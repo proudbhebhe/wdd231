@@ -7,6 +7,7 @@ const view = document.querySelector("#company-directory");
 const temp = document.querySelector("#current-temp");
 const icon = document.querySelector("#weather-icon");
 const caption = document.querySelector("figcaption");
+const open = document.querySelector(".open");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=49.75205053829418&lon=6.634337431098181&units=metric&lang=en&appid=76372a2b3151a15e77c663c7b5189618'
 
 
@@ -140,35 +141,26 @@ function renderForecastUI(forecastList) {
 }
 async function displayCompanyInsights() {
     try {
-        // 1. Fetch and parse the JSON file
         const response = await fetch('data/members.json');
         const allCompanies = await response.json();
 
-        // 2. Filter for exactly one company per membership level
         const insightCompanies = [
             allCompanies.find(company => company.membership_level === 1),
             allCompanies.find(company => company.membership_level === 2),
             allCompanies.find(company => company.membership_level === 3)
         ];
 
-        // 3. Target the HTML container and clear any existing content
         const container = document.querySelector("#company-insight");
         container.innerHTML = "";
 
-        // 4. Loop through the three selected companies
         insightCompanies.forEach(company => {
-            // Ensure a company was actually found for the level before building
             if (company) {
                 let card = document.createElement('section');
                 let name = document.createElement("h2");
                 let website = document.createElement("a");
                 let image = document.createElement("img");
                 let membership = document.createElement("span");
-                // --- YOUR DOM CODE GOES HERE ---
-                // Paste your let card = document.createElement('section') logic here!
-                // Just remember to change your final appendChild target from 
-                // document.querySelector("#company-directory") to just:
-                // container.appendChild(card);
+                
                 name.textContent = company.company_name;
                 website.textContent = company.company_website_url;
                 membership.textContent = company.membership_level;
@@ -195,8 +187,7 @@ async function displayCompanyInsights() {
     }
 }
 
-// Execute the function
-displayCompanyInsights();
+
 
 function displayResults(data){
     temp.innerHTML = `${data.main.temp}°C`;
@@ -210,6 +201,7 @@ function displayResults(data){
 getData();
 apiFetch();
 fetchThreeDayForecast();
+displayCompanyInsights();
 if (grid){
     
 grid.addEventListener('click', ()=>{

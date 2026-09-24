@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <meta name="author" content="Proud Bhebhe">
+    <meta name="description" content="This page provides a list of local business and other organizations that belong to the chamber of commerce.">
+    <meta property="og:title" content="Business Directory">
+    <meta property="og:description" content="This page provides a list of local business and other organizations that belong to the chamber of commerce.">
+    <meta property="og:image" content="https://proudbhebhe.github.io/wdd231/chamber/images/logo.jpg">
+    <meta property="og:url" content="https://proudbhebhe.github.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/base.js" defer></script>
+    <link  rel="icon" href="images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Ilanga commerce logo">
+        <span>Ilanga Chamber of Commerce</span>
+        <span id="ham-Button" class="hamburger"></span>
+         <nav id="nav-bar" class="navigation">
+            <a href="index.html">Home</a>
+            <a href="discovery.html">Discovery</a>
+            <a href="directory.html">Business Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Join</h1>
+        <div class="display">
+            <div>
+                <h2>Membership Application Form</h2>
+                <form method="get" action="thanks.html" class="transform">
+                    <label for="firstName">First Name<input name="firstName" id="firstName" type="text" placeholder="John" autocomplete="given-name" title="Your First Name" required></label>
+                    <label for="lastName">Last Name<input name="lastName" id="lastName" type="text" placeholder="Smith" autocomplete="family-name" title="Your Last Name" required></label>
+                    <label for="organization">Organization Title<input name="organization" id="organization" autocomplete="organization-title" title="Your Organization Name" type="text" required></label>
+                    <label for="email">Email<input name="email" id="email" placeholder="example@gmail.com" autocomplete="email" title="Your Email" type="text" required></label>
+                    <label for="phone">Phone<input type="tel" name="phone" id="phone" placeholder="263 78 987 6543" title="A phone number with dashes" autocomplete="tel" required></label>
+                    <label for="businessName">Business Name<input type="text" name="businessName" title="Business Name" autocomplete="organization" required></label>
+                    <label>
+                        Membership Status
+                        <select name="status" id="" required>
+                            <option value="NP">Non-Profit</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Gold">Gold</option>
+                            <option value="Platinum">Platinum</option>
+                        </select>
+                    </label>
+                    <label for="description">Message Description<textarea type="text" title="My Description" name="description"></textarea></label>
+                    <label for="timestamp"><input type="hidden" name="timestamp" id="timestamp"></label>
+                    <button id="submit">Apply for Membership</button>
+                    
+                </form>
+            </div>
+            <div>  
+                <h2>Membership Levels</h2>
+                <div class="membership">
+                    <h3>Non-profit Membership</h3>
+                    <button class="open">Learn More</button>
+                </div>
+                <div class="membership">
+                    <h3>Silver Membership</h3>
+                    <button class="open">Learn More</button>
+                </div>
+                <div class="membership">
+                    <h3>Gold Membership</h3>
+                    <button class="open">Learn More</button>
+                </div>
+                <div class="membership">
+                    <h3>Platinum Membership</h3>
+                    <button class="open">Learn More</button>
+                </div>
+
+            
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p>Ilanga Chamber of Commerce</p> 
+            <p> jason moyo, and 8th Ave, Bulawayo, Zimbabwe</p>
+            <p>info@ilangacc.org</p>
+            <p>+26377+++++++</p>
+        </div>
+        <div class="socials">
+            <a href="#"><img src="images/facebook_icon.svg" alt="facebook icon" ></a>
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/linkedin_icon.svg" alt="linkedin logo"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p> 
+            <p>Proud Bhebhe</p>
+            <p>&copy;<span id="currentYear"></span>Ilanga Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+        
+        
+    </footer>
+    
+</body>
+</html>

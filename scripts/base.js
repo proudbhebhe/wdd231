@@ -1,5 +1,8 @@
 const navButton = document.querySelector('#nav-button');
 const navBar = document.querySelector('#nav-bar');
+const courseDiv = document.querySelector('.block');
+const courseDetails = document.querySelector('#course-details');
+const closeButton = document.querySelector('#closeButton');
 
 const today = document.querySelector("#currentYear");
 if (today) today.textContent = new Date().getFullYear();
@@ -144,6 +147,26 @@ newLink.addEventListener("click", ()=>{
 );  
 createCourseCards(wddCourses);
 });
+courseDiv.addEventListener('click', () => {
+  displayCourseDetails(course);
+});
+function displayCourseDetails(course) {
+  courseDetails.innerHTML = '';
+  courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  courseDetails.showModal();
+  
+  closeModal.addEventListener("click", () => {
+    courseDetails.close();
+  });
+}
 
 document.getElementById("lastModified").innerHTML ="Last modified:" + document.lastModified;
 navButton.addEventListener('click', () => {

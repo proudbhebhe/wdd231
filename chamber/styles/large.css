@@ -40,8 +40,9 @@
     }
     .action{
         position: absolute;
-        top: 450px;
-        left: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: var(--primary-color);
         padding: 10px;
         font-size: 1.5rem;
@@ -52,6 +53,23 @@
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    }
+    .display{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .membership{
+        width: 400px;
+        height: 100px;
+        background-color: #83904f;
+        color: #1a1a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
     }
     footer{
         background-color: var(--secondary-color);
