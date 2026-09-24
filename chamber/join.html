@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory</title>
+    <title>Join|Ilanga Chamber of Commerce</title>
     <meta name="author" content="Proud Bhebhe">
     <meta name="description" content="This page provides a list of local business and other organizations that belong to the chamber of commerce.">
     <meta property="og:title" content="Business Directory">
@@ -37,25 +37,26 @@
         <div class="display">
             <div>
                 <h2>Membership Application Form</h2>
-                <form method="get" action="thanks.html" class="transform">
+                <form method="get" action="thankyou.html" class="transform">
                     <label for="firstName">First Name<input name="firstName" id="firstName" type="text" placeholder="John" autocomplete="given-name" title="Your First Name" required></label>
-                    <label for="lastName">Last Name<input name="lastName" id="lastName" type="text" placeholder="Smith" autocomplete="family-name" title="Your Last Name" required></label>
+                    <label for="lastName">Last Name<input name="lastName" id="lastName" type="text" placeholder="Smith" autocomplete="family-name" title="Your Last Name" pattern="[a-zA-Z\- ]{7,}"></label>
                     <label for="organization">Organization Title<input name="organization" id="organization" autocomplete="organization-title" title="Your Organization Name" type="text" required></label>
-                    <label for="email">Email<input name="email" id="email" placeholder="example@gmail.com" autocomplete="email" title="Your Email" type="text" required></label>
+                    <label for="email">Email<input name="email" id="email" placeholder="example@gmail.com" autocomplete="email" title="Your Email" type="email" required></label>
                     <label for="phone">Phone<input type="tel" name="phone" id="phone" placeholder="263 78 987 6543" title="A phone number with dashes" autocomplete="tel" required></label>
-                    <label for="businessName">Business Name<input type="text" name="businessName" title="Business Name" autocomplete="organization" required></label>
+                    <label for="businessName">Business Name<input type="text" id="businessName" title="Business Name" autocomplete="organization" required></label>
                     <label>
                         Membership Status
-                        <select name="status" id="" required>
+                        <select name="status"  required>
+                            <option value="" aria-placeholder="Choose Your Membership"></option>
                             <option value="NP">Non-Profit</option>
+                            <option value="Bronze">Bronze</option>
                             <option value="Silver">Silver</option>
                             <option value="Gold">Gold</option>
-                            <option value="Platinum">Platinum</option>
                         </select>
                     </label>
-                    <label for="description">Message Description<textarea type="text" title="My Description" name="description"></textarea></label>
+                    <label for="description">Message Description<textarea id="description" title="My Description" name="description"></textarea></label>
                     <label for="timestamp"><input type="hidden" name="timestamp" id="timestamp"></label>
-                    <button id="submit">Apply for Membership</button>
+                    <button id="submit" type="submit">Apply for Membership</button>
                     
                 </form>
             </div>

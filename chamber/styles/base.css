@@ -207,7 +207,6 @@ section ul .event:nth-child(even){
 }
 .transform{
     margin: 0 20px;
-    background-color: hsl(#7f8758, 60%, 60%);
 }
 label {
   display: block;
