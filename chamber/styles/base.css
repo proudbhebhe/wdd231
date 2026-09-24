@@ -262,7 +262,29 @@ input:required:valid{border-left-color: green;}
 .display{
     display: grid;
 }
-
+.membership{
+    width: 400px;
+    height: 100px;
+    background-color: #83904f;
+    color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    animation: truth 1s ease-out forwards;
+}
+@keyframes truth {
+    0%{
+        transform: translateY(var(--start-dist, 100px));
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
 footer{
     background-color: var(--footer-color);
     display: grid;

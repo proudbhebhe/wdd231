@@ -70,6 +70,16 @@
         margin: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 20px;
+        animation: truth 1s ease-out forwards;
+    }
+    @keyframes truth {
+        0%{
+            transform: translateY(100px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+        
     }
     footer{
         background-color: var(--secondary-color);
