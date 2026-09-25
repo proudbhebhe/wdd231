@@ -278,10 +278,10 @@ input:required:valid{border-left-color: green;}
 }
 @keyframes truth {
     0%{
-        transform: translateY(var(--start-dist, 100px));
+        transform: translateX(var(--start-dist, 100px));
     }
     100%{
-        transform: translateY(0);
+        transform: translateX(0);
     }
     
 }
