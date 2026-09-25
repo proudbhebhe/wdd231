@@ -7,9 +7,40 @@ const view = document.querySelector("#company-directory");
 const temp = document.querySelector("#current-temp");
 const icon = document.querySelector("#weather-icon");
 const caption = document.querySelector("figcaption");
-const open = document.querySelector(".open");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=49.75205053829418&lon=6.634337431098181&units=metric&lang=en&appid=76372a2b3151a15e77c663c7b5189618'
+const buttons = document.querySelectorAll(".open");
+const modal = document.querySelector("#info-modal");
+const modalMessage = document.querySelector("#modal-message");
+const closeModal = document.querySelector("#close-modal");
 
+buttons.forEach(function(button) {
+
+    button.addEventListener("click", function() {
+
+        const message = button.dataset.message;
+
+          modalMessage.textContent = message; 
+        modal.showModal();
+
+    });
+
+});
+
+closeModal.addEventListener("click", function() {
+
+    modal.close();
+
+});
+
+modal.addEventListener("click", function(event) {
+
+    if (event.target === modal) {
+
+        modal.close();
+
+    }
+
+});
 
 
 if (today) today.textContent = new Date().getFullYear();
