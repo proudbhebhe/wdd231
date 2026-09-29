@@ -14,7 +14,7 @@ console.log(myInfo.get('email'));
 console.log(myInfo.get('description'));
 
 document.querySelector("#results").innerHTML = `
-<p>Appointment for ${myInfo.get('first')} ${myInfo.get('last')}</p>
-<p>Proxy ${myInfo.get('organization')} on ${myInfo.get('businessName')} in the ${myInfo.get('location')} Temple</p><p>Your phone: ${myInfo.get('phone')} </p>
+<p>Full Name: ${myInfo.get('firstName')} ${myInfo.get('lastName')}</p>
+<p>From ${myInfo.get('businessName')} of ${myInfo.get('organization')} who wants the ${myInfo.get('status')} membership</p><p>Your phone: ${myInfo.get('phone')} </p>
 <p>Your email: ${myInfo.get('email')}</p>
-<p>${myInfo.get('description')}</p>`
+<p>The message: ${myInfo.get('description')}</p>`

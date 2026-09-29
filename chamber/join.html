@@ -64,43 +64,47 @@
                 <h2>Membership Levels</h2>
                 <div class="membership">
                     <h3>Non-profit Membership</h3>
-                    <button class="open">Learn More</button>
+                    <button class="open" data-membership="0">Learn More</button>
                 </div>
                 <div class="membership">
                     <h3>Bronze Membership</h3>
-                    <button class="open">Learn More</button>
+                    <button class="open" data-membership="1">Learn More</button>
                 </div>
                 <div class="membership">
                     <h3>Silver Membership</h3>
-                    <button class="open">Learn More</button>
+                    <button class="open" data-membership="2">Learn More</button>
                 </div>
                 <div class="membership">
                     <h3>Gold Membership</h3>
-                    <button class="open">Learn More</button>
+                    <button class="open" data-membership="3">Learn More</button>
                 </div>
                 
 
             
             </div>
         </div>
-         <dialog id="info-modal">
+        <dialog id="info-modal">
 
-        <div class="modal-content">
+            <div class="modal-content">
 
-            <button 
-                id="close-modal"
-                class="close-modal"
-                aria-label="Close modal">
-                &times;
-            </button>
+                <button 
+                    id="close-modal"
+                    class="close-modal"
+                    aria-label="Close modal">
+                    &times;
+                </button>
+                <h2 id="modal-title"></h2>
 
-            <h2></h2>
+                <p id="modal-description"></p>
 
-            <p id="modal-message"></p>
+                <ul id="modal-benefits"></ul>
 
-        </div>
+                <p id="modal-cost"></p>
+            
 
-    </dialog>
+            </div>
+
+        </dialog>
 
     </main>
     <footer>

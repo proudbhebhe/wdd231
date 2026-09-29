@@ -349,6 +349,20 @@ input:required:valid{border-left-color: green;}
 .close-modal:hover {
     opacity: 0.6;
 }
+.thankyou{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+.thankyou #results{
+    border: solid #1a1a1a 1px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: var(--bg);
+}
 footer{
     background-color: var(--footer-color);
     display: grid;
