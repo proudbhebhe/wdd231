@@ -1,129 +1,13 @@
 const navButton = document.getElementById("ham-Button");
 const navBar = document.getElementById("nav-bar");
 const today = document.querySelector("#currentYear");
-const grid = document.querySelector("#grid");
-const list = document.querySelector("#list");
-const view = document.querySelector("#company-directory");
+
+
 const temp = document.querySelector("#current-temp");
 const icon = document.querySelector("#weather-icon");
 const caption = document.querySelector("figcaption");
 const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=49.75205053829418&lon=6.634337431098181&units=metric&lang=en&appid=76372a2b3151a15e77c663c7b5189618'
-const buttons = document.querySelectorAll(".open");
-const modal = document.querySelector("#info-modal");
-const modalMessage = document.querySelector("#modal-message");
-const closeModal = document.getElementById("close-modal");
 
-const membership = [
-    {
-        name: "Non-Profit Membership",
-        description: "A membership option designed for organizations and individuals serving their communities without a profit-driven focus.",
-        benefits: [
-            "Access to member resources",
-            "Community networking opportunities",
-            "Member-only updates",
-            "Basic support"
-        ],
-        cost: "$0"
-    },
-
-    {
-        name: "Bronze Membership",
-        description: "A simple membership plan for individuals or organizations looking for essential membership benefits.",
-        benefits: [
-            "Access to member resources",
-            "Community networking opportunities",
-            "Member-only updates",
-            "Basic support",
-            "Member discounts"
-        ],
-        cost: "$25/year"
-    },
-
-    {
-        name: "Silver Membership",
-        description: "A more comprehensive membership for members who want additional benefits and greater access to services.",
-        benefits: [
-            "All Bronze benefits",
-            "Priority support",
-            "Additional member discounts",
-            "Exclusive events and resources",
-            "Enhanced networking opportunities"
-        ],
-        cost: "$50/year"
-    },
-
-    {
-        name: "Gold Membership",
-        description: "Our most comprehensive membership option, offering the highest level of access, support, and exclusive benefits.",
-        benefits: [
-            "All Silver benefits",
-            "Premium support",
-            "Highest member discounts",
-            "VIP access to selected events",
-            "Exclusive resources",
-            "Priority networking opportunities"
-        ],
-        cost: "$100/year"
-    }
-];
-
-const modalTitle = document.querySelector("#modal-title");
-const modalDescription = document.querySelector("#modal-description");
-const modalBenefits = document.querySelector("#modal-benefits");
-const modalCost = document.querySelector("#modal-cost");
-
-buttons.forEach(function(button) {
-
-    button.addEventListener("click", function() {
-
-        const membershipIndex = button.dataset.membership;
-
-        const selectedMembership = membership[membershipIndex];
-
-        // Name
-        modalTitle.textContent = selectedMembership.name;
-
-        // Description
-        modalDescription.textContent = selectedMembership.description;
-
-        // Cost
-        modalCost.textContent = selectedMembership.cost;
-
-        // Clear previous benefits
-        modalBenefits.innerHTML = "";
-
-        // Add benefits
-        selectedMembership.benefits.forEach(function(benefit) {
-
-            const li = document.createElement("li");
-
-            li.textContent = benefit;
-
-            modalBenefits.appendChild(li);
-
-        });
-
-        // Open modal
-        modal.showModal();
-    });
-
-});
-
-closeModal.addEventListener("click", function() {
-
-    modal.close();
-
-});
-
-modal.addEventListener("click", function(event) {
-
-    if (event.target === modal) {
-
-        modal.close();
-
-    }
-
-});
 
 
 if (today) today.textContent = new Date().getFullYear();
@@ -147,61 +31,7 @@ async function apiFetch() {
   }
 }
 
-async function getData() {
-    const response = await fetch('data/members.json');
-    const companies = await response.json();
-    
-    const container = document.querySelector("#company-directory").innerHTML= "";
 
-    companies.forEach(company =>{
-        let card = document.createElement('section');
-        card.className = "business-card";
-        
-        let headerDiv = document.createElement('div');
-        headerDiv.className = "card-header";
-
-        let divider = document.createElement('hr');
-        divider.className = "divider";
-
-        let bodyDiv =document.createElement('div');
-        bodyDiv.className = "card-body";
-
-        let contactDiv = document.createElement('div');
-        contactDiv.class = "card-contact";
-        
-        let name = document.createElement("h2");
-        let website = document.createElement("a");
-        let address = document.createElement("p");
-        let image = document.createElement("img");
-        let phone = document.createElement("p");
-        let membership = document.createElement("p");
-        let industry = document.createElement("p");
-
-        name.textContent = company.company_name;
-        address.innerHTML = company.company_addresses[0];
-        website.textContent = company.company_website_url;
-        phone.textContent = company.company_phone_number;
-        industry.innerHTML = '<span class="label">Industry: </span>'+company.industry;
-        phone.innerHTML = '<strong>Phone:</strong>'+company.company_phone_number;
-
-        website.setAttribute("href", company.company_website_url)
-        image.setAttribute("src", company.image_file_name);
-        image.setAttribute("alt", company.company_name);
-        image.setAttribute("loading", "lazy");
-
-        card.appendChild(name);
-        card.appendChild(image);
-        card.appendChild(address);
-        card.appendChild(phone);      
-        card.appendChild(industry);
-        card.appendChild(website);
-
-       
-
-        
-        document.querySelector("#company-directory").appendChild(card);
-    });
-}
 async function fetchThreeDayForecast() {
   try {
     const response = await fetch(url);
@@ -253,53 +83,6 @@ function renderForecastUI(forecastList) {
     container.appendChild(card);
   });
 }
-async function displayCompanyInsights() {
-    try {
-        const response = await fetch('data/members.json');
-        const allCompanies = await response.json();
-
-        const insightCompanies = [
-            allCompanies.find(company => company.membership_level === 1),
-            allCompanies.find(company => company.membership_level === 2),
-            allCompanies.find(company => company.membership_level === 3)
-        ];
-
-        const container = document.querySelector("#company-insight");
-        container.innerHTML = "";
-
-        insightCompanies.forEach(company => {
-            if (company) {
-                let card = document.createElement('section');
-                let name = document.createElement("h2");
-                let website = document.createElement("a");
-                let image = document.createElement("img");
-                let membership = document.createElement("span");
-                
-                name.textContent = company.company_name;
-                website.textContent = company.company_website_url;
-                membership.textContent = company.membership_level;
-
-                website.setAttribute("href", company.company_website_url)
-                image.setAttribute("src", company.image_file_name);
-                image.setAttribute("alt", company.company_name);
-                image.setAttribute("loading", "lazy");
-
-                
-
-                card.appendChild(name);
-                card.appendChild(image);
-                card.appendChild(website);
-                card.appendChild(membership);
-
-
-                document.querySelector("#company-insight").appendChild(card);
-            }
-        });
-
-    } catch (error) {
-        console.error("Error loading insight companies:", error);
-    }
-}
 
 
 
@@ -312,21 +95,9 @@ function displayResults(data){
 
 }
 
-getData();
+
 apiFetch();
 fetchThreeDayForecast();
-displayCompanyInsights();
-if (grid){
-    
-grid.addEventListener('click', ()=>{
-    view.classList.toggle('gridView');
-    view.classList.remove('listView');
-});
-}
-if (list){
-list.addEventListener('click', ()=> {
-    view.classList.toggle('listView');
-    view.classList.remove('gridView');
-});
-}
+
+
 document.getElementById("lastModified").innerHTML ="Last modified:" + document.lastModified;

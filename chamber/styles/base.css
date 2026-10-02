@@ -45,12 +45,17 @@ header span{
     font-size: 3rem;
     
 }
+.active{
+    background-color: var(--footer-color);
+    color: #1a1a1a;
+    border-radius: 5px;
+}
 .navigation{
     display: none;
 }
 .navigation.show{
     display: grid;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 .second{
@@ -61,6 +66,35 @@ header span{
 .second section{
     width: 300px;
     margin: 0 100px;
+}
+#funPlaces section{
+    margin: 1rem 8px;
+    border: solid 1px #999;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+    "name"
+    "image"
+    "description"
+    "location";
+}
+#funPlaces section h2{
+    margin: 1rem 10px;
+    grid-area: name;
+}
+#funPlaces section img{
+    width: 100%;
+    grid-area: image;
+}
+#funPlaces section p{
+    margin: 1rem 10px;
+    grid-area: description;
+}
+#funPlaces section address{
+    margin: 1rem 10px;
+    grid-area: location;
 }
 #forecast-container{
     display: flex;

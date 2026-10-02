@@ -1,4 +1,4 @@
-@media screen and (min-width: 32.5rem){
+@media screen and (min-width: 38rem){
     :root{
     --secondary-color: #465082;
     --primary-color: #ddec13;
@@ -49,6 +49,20 @@
         color: #1a1a1a;
         border-radius: 10px;
     }
+    #funPlaces section{
+    grid-template-areas:
+    "image name"
+    "image description"
+    "image location";
+}
+#funPlaces section h2{
+    margin: 1rem 10px;
+    grid-area: name;
+}
+#funPlaces section img{
+    width: 300px;
+}
+
     #company-directory section{
     display: grid;
     place-items: center;
@@ -100,5 +114,11 @@
         margin: 0 20px;
         width: 75px;
         height: 75px;
+    }
+}
+@media screen and (min-width: 64rem) {
+    #funPlaces{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
