@@ -4,6 +4,7 @@
     --primary-color: #ddec13;
     --footer-color: #83904f;
     --bg: #F8FAFC;
+    --text:#1a1a1a;
     --font-family: 'Inter', system-ui, sans-serif;
     }
     .hamburger{
@@ -37,6 +38,11 @@
     .second{
         display: flex;
         justify-content: center;
+    }
+    .active{
+        background-color: var(--text);
+        color: var(--text);
+        border-radius: 5px;
     }
     .action{
         position: absolute;
@@ -121,4 +127,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    .active{
+    background-color: var(--text);
+    color: var(--text);
+    border-radius: 5px;
+}
 }

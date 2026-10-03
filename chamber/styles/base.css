@@ -4,6 +4,7 @@
     --footer-color: #83904f;
     --footer: #7f8758;
     --bg: #F8FAFC;
+    --text: #1a1a1a;
     
     --font-family: 'Inter', system-ui, sans-serif;
 }
@@ -23,7 +24,6 @@
     }
 header{
     background-color: var(--secondary-color);
-    color: var(--bg);
     display: grid;
     grid-template-columns: 75px 1fr 44px;
     gap: 8px;
@@ -46,8 +46,8 @@ header span{
     
 }
 .active{
-    background-color: var(--footer-color);
-    color: #1a1a1a;
+    background-color: var(--text);
+    color: var(--text);
     border-radius: 5px;
 }
 .navigation{
