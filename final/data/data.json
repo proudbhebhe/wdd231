@@ -1,0 +1,101 @@
+[
+    {
+        "name":"Mild wings",
+        "description": "5 mild flavoured wings",
+        "price": "$5.99",
+        "image": "images/1.jpg"
+    },
+    {
+        "name": "Salty Wings",
+        "description": "5 Salty Wings",
+        "price": "$4.99",
+        "image": "images/2.jpg"
+    },
+    {
+        "name": "Cheese Wings",
+        "description": "5 Cheese wings",
+        "price": "$3.99",
+        "image": "images/3.jpg"
+    },
+    {
+        "name": "Hot Wings",
+        "description": "5 Hot wings",
+        "price": 6.99,
+        "image": "images/4.jpg",
+        "featured": true
+    },
+    {
+        "name": "Strawberry Milkshake",
+        "description": "500ml milkshake with sprinkles",
+        "price": "$1.50",
+        "image": "images/5.jpg"
+    },
+    {
+        "name": "Banana Milkshake",
+        "description": "500ml milkshake with sprinkles",
+        "price": "$1.50",
+        "image": "images/6.jpg"
+    },
+    {
+        "name": "Vanilla Milkshake",
+        "description": "500ml milkshake with sprinkles",
+        "price": "$1.50",
+        "image": "images/7.jpg"
+    },
+    {
+        "name": "Chocolate Milkshake",
+        "description":"500ml milkshake with sprinkles",
+        "price": "$1.50",
+        "image": "images/8.jpg"
+    },
+    {
+        "name":"Fire & Ice",
+        "description":"5 Hot wings & Milkshake",
+        "price": "$7.99",
+        "image":"images/9.jpg",
+        "featured": true
+    },
+    {
+        "name": "Spice & Shake",
+        "description":"5 mild wings & Milkshake",
+        "price": "$6.99",
+        "image": "images/10.jpg"
+    },
+    {
+        "name": "Burn & Churn",
+        "description":"5 Salty Wings & Milkshake",
+        "price": "$5.99",
+        "image": "images/11.jpg"
+    },
+    {
+        "name": "Bold & Cold",
+        "description": "5 Cheese wings & Milkshake",
+        "price":"$4.99",
+        "image": "images/12.jpg"
+    },
+    {
+        "name": "CocaCola",
+        "description": "330ml soda can",
+        "price": "$0.99",
+        "image": "images/13.jpg",
+        "featured":true
+    },
+    {
+        "name": "Sprite",
+        "description": "330ml soda can",
+        "price": "$0.99",
+        "image": "images/14.jpg"
+    },
+    {
+        "name": "Pepsi",
+        "description": "330ml soda can",
+        "price": "$0.99",
+        "image": "images/15.jpg"
+    },
+    {
+        "name": "Dr Pepper",
+        "description": "330ml soda can",
+        "price":"$0.99",
+        "image": "images/16.jpg"
+    }
+]
