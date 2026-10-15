@@ -1,37 +1,87 @@
+// Navigation Toggle
 const hamButton = document.querySelector('#hamButton');
 const nav = document.querySelector('#navBar');
 
-hamButton.addEventListener('click',() =>{
-    nav.classList.toggle("show");
-} )
-
-async function getData() {
-    const response = await fetch('data/data.json');
-    const display = await response.json();
-
-    const container = document.querySelector("#menu").innerHTML= "";
-
-    display.forEach(item =>{
-        let card = document.createElement('div');
-        card.className = "card";
-        let name = document.createElement("h2");
-        let description = document.createElement("p");
-        let price = document.createElement("strong");
-        let image = document.createElement("img");
-
-        name.textContent = item.name;
-        description.textContent = item.description;
-        price.textContent = item.price;
-        image.setAttribute("src", item.image,".jpg");
-        image.setAttribute("alt", item.description);
-        image.setAttribute("loading", "lazy");
-
-        card.appendChild(image);
-        card.appendChild(name);
-        card.appendChild(description);
-        card.appendChild(price);
-
-        document.querySelector("#menu").appendChild(card);
+if (hamButton) {
+    hamButton.addEventListener('click', () => {
+        nav.classList.toggle("show");
     });
 }
+
+// Set Timestamp for Form
+const timestampField = document.querySelector("#timestamp");
+if (timestampField) {
+    timestampField.value = new Date().toISOString();
+}
+
+// Fetch and display full menu
+async function getData() {
+    const container = document.querySelector("#menu");
+    
+    if (container) {
+        try {
+            const response = await fetch('data/data.json');
+            const display = await response.json();
+            
+            container.innerHTML = "";
+            
+            display.forEach(item => {
+                let card = document.createElement('div');
+                card.className = "card";
+                
+                let name = document.createElement("h2");
+                let description = document.createElement("p");
+                let price = document.createElement("strong");
+                let image = document.createElement("img");
+                
+                name.textContent = item.name;
+                description.textContent = item.description;
+                price.textContent = item.price;
+                
+                image.setAttribute("src", item.image);
+                image.setAttribute("alt", item.description);
+                image.setAttribute("loading", "lazy");
+                
+                card.appendChild(image);
+                card.appendChild(name);
+                card.appendChild(description);
+                card.appendChild(price);
+                
+                container.appendChild(card);
+            });
+        } catch (error) {
+            console.error("Error loading menu data:", error);
+        }
+    }
+}
+
+// Fetch and display featured items on home page
+async function initBestSellers() {
+    const track = document.querySelector("#featured");
+    
+    if (track) {
+        try {
+            const response = await fetch('data/data.json');
+            const products = await response.json();
+            
+            const featuredItems = products.filter(product => product.featured);
+            track.innerHTML = "";
+            
+            featuredItems.forEach(item => {
+                let card = document.createElement('div');
+                card.className = "card";
+                card.innerHTML = `<img src="${item.image}" alt="${item.description}" loading="lazy">
+                <h2>${item.name}</h2>
+                <p>${item.description}</p>
+                <strong>${item.price}</strong>`;
+                track.appendChild(card);
+            });
+        } catch (error) {
+            console.error("Error loading featured items:", error);
+        }
+    }
+}
+
+// Initialize
 getData();
+initBestSellers();

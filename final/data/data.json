@@ -46,7 +46,8 @@
         "name": "Chocolate Milkshake",
         "description":"500ml milkshake with sprinkles",
         "price": "$1.50",
-        "image": "images/8.jpg"
+        "image": "images/8.jpg",
+        "featured": true
     },
     {
         "name":"Fire & Ice",
