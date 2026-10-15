@@ -8,18 +8,21 @@
     <meta property="og:title" content="Urban Wings | Contact">
     <meta property="og:description" content="Get in touch with Urban Wings today.">
     <meta property="og:image" content="images/hero.jpg">
-    <meta property="og:url" content="https://alphatron.dev/urbanwings/contact.html">
+    <meta property="og:url" content="https://proudbhebhe.github.io/wdd231/final/contact.html">
     <title>Urban Wings | Contact</title>
-    <link rel="icon" href="images/logo.png">
+    <link rel="icon" href="https://proudbhebhe.github.io/wdd231/final/images/logo.png">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
     <script src="scripts/base.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <a href="index.html"><img src="images/logo.png" alt="Urban Wings company logo"></a>
         <span>Urban Wings</span>
-        <button id="hamButton" aria-label="Toggle navigation menu">🍔</button>
+        <button id="hamButton" aria-label="Toggle navigation menu">≡</button>
         <nav id="navBar" class="navigation">
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
@@ -29,20 +32,21 @@
     <main>
         <div class="display">
             <div>
-                <h2>Membership Application Form</h2>
+                <h1>Place your Order</h1>
                 <form method="get" action="thankyou.html" class="transform">
                     <label for="firstName">First Name</label>
                     <input name="firstName" id="firstName" type="text" placeholder="John" autocomplete="given-name" title="Your First Name" required>
                     
                     <label for="phone">Phone</label>
                     <input type="tel" name="phone" id="phone" placeholder="263 78 987 6543" title="A phone number with dashes" autocomplete="tel" required>
-                    
-                    <label for="description">Message Description</label>
+                    <h2>Select Your Items</h2>
+                    <div id="orderItems"></div>       
+                    <label for="description">Special knowledge</label>
                     <textarea id="description" title="My Description" name="description"></textarea>
                     
                     <input type="hidden" name="timestamp" id="timestamp">
                     
-                    <button id="submit" type="submit">Apply for Membership</button>
+                    <button id="submit" type="submit">Submit Order</button>
                 </form>
             </div>
         </div>

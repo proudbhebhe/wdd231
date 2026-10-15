@@ -81,7 +81,47 @@ async function initBestSellers() {
         }
     }
 }
+async function initOrderForm() {
+    const orderContainer = document.querySelector("#orderItems");
+    
+    // Only run if the order form exists on the current page
+    if (orderContainer) {
+        try {
+            const response = await fetch('data/data.json');
+            const products = await response.json();
+            
+            orderContainer.innerHTML = "";
+            
+            products.forEach((item, index) => {
+                let orderRow = document.createElement('div');
+                orderRow.className = "order-item";
+                
+                // Create a checkbox, label with price, and a number input for quantity
+                orderRow.innerHTML = `
+                    <input type="checkbox" id="item${index}" name="selectedItems" value="${item.name}">
+                    <label for="item${index}"><strong>${item.name}</strong> - ${item.price}</label>
+                    <input type="number" id="qty${index}" name="quantity_${item.name}" min="1" max="20" placeholder="Qty" disabled>
+                `;
+                
+                orderContainer.appendChild(orderRow);
 
+                // Enable the quantity input only when the checkbox is checked
+                const checkbox = orderRow.querySelector(`#item${index}`);
+                const qtyInput = orderRow.querySelector(`#qty${index}`);
+                
+                checkbox.addEventListener('change', () => {
+                    qtyInput.disabled = !checkbox.checked;
+                    if (checkbox.checked) qtyInput.value = 1;
+                    else qtyInput.value = "";
+                });
+            });
+        } catch (error) {
+            console.error("Error loading order items:", error);
+            orderContainer.innerHTML = "<p>Sorry, the menu is currently unavailable.</p>";
+        }
+    }
+}
 // Initialize
 getData();
 initBestSellers();
+initOrderForm();
